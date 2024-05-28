@@ -1,4 +1,4 @@
-
+'use client'
 import './style.css'
 
 
@@ -22,13 +22,13 @@ export const Btn_Neon = () => {
                     btn_neon2
                 </a>
 
-                <a href='#'>
+              {/*  <a href='#'>
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     btn_neon3
-                </a> {/* nth-child(3) da div */}
+                </a>  nth-child(3) da div */}
 
 
             </div>
