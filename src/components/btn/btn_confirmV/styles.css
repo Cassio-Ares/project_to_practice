@@ -1,0 +1,137 @@
+.container_btn{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: #0C70F2;
+  color: #fff;
+}
+
+.check_box{
+  display: none;
+}
+
+.button{
+ box-sizing: border-box;
+ position: absolute;
+ display: block;
+ width: 260px;
+ height: 60px;
+ top: 170px;
+ left: 70px;
+ border: 2px solid #fff;
+ border-radius: 30px;
+ text-align: center;
+ line-height: 56px;
+ font-size: 20px;
+ text-transform: uppercase;
+ font-weight: 600;
+ letter-spacing: 2px;
+ transition: all 0.3s ease-in-out;
+ cursor: pointer;
+}
+
+.button:hover{
+    background: #37BE77;
+}
+
+.button img{
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    left: 15px;
+    opacity: 0;    
+}
+
+
+.cicle{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  top: 170px;
+  left: 170px;
+  fill: none; /*afeta o preenchimento de circle com none apenas o contorno do circle sem cor dentro*/
+  stroke: #fff; /* define a cor do contorno */
+  stroke-width: 2px; /* define a largura do contorno*/
+  stroke-linecap: round; /* Esta propriedade define o estilo das extremidades do contorno da forma.*/
+  stroke-dasharray: 183 183; /*define o padrão de traço  1(define o compromento do traço) 2(define o comprimento do espaço entre os traços)*/
+  stroke-dashoffset: 183; /*Define o deslocamento do traço usado para animação*/
+  pointer-events: none;
+  transform: rotate(-90deg);
+} 
+
+input:checked ~ .button{ /* ~ seletor do primeiro irmão seginte no caso quando checked aplique animação a .button*/
+   animation: button 0.5s ease both, fill 0.5s ease-out 1.5s forwards;
+}
+
+@keyframes button {
+  0% {
+    width: 260px;
+    left: 70px;
+    border-color: #fff;
+    color: #fff;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    width: 60px;
+    left: 170px;
+    border-color: #45b078;
+    background: transparent;
+    color: transparent;
+  }
+}
+
+@keyframes fill {
+  0% {
+    background: transparent;
+    border-color: #fff;
+  }
+  100% {
+    background: #fff;
+  }
+}
+
+
+input:checked ~ .button img{ /*both os estilos serão aplicados antes e depois da animação*/
+  animation: check 0.5s ease-out 1.5s both;
+}
+
+
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+ input:checked ~ .cicle{  
+  animation: cicle 2s ease-out 0.5s both;
+}
+
+@keyframes cicle {
+  0% {
+    stroke-dashoffset: 183;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 183;
+    transform: rotate(-90deg) scale(1);
+    opacity: 1;
+  }
+  90%, 100% {
+    stroke-dasharray: 500 500;
+    transform: rotate(-90deg) scale(2);
+    opacity: 0;
+  }
+}
