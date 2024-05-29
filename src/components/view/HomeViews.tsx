@@ -16,11 +16,12 @@ export default function HomeViews () {
             <Btn_Neon/>
           </Grid>
           <Grid item xs={2} sm={4} md={4}>
-            <Btn_ConfirmV/>
-          </Grid>
-          <Grid item xs={2} sm={4} md={4}>
             <CardHover/>
           </Grid>
+          <Grid item xs={2} sm={4} md={4}>
+            <Btn_ConfirmV/>
+          </Grid>
+         
       </Grid>
     </Box>
   );

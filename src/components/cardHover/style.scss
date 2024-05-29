@@ -1,0 +1,89 @@
+$numberOfTriggers: 200; 
+
+$offset: 400 / $numberOfTriggers;
+
+.frame{
+    position: relative;
+    top:50%;
+    left: 50%;
+     width: 400px;// width: 100%;
+     height: 400px;
+     margin-top: -200px;
+     margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px #0000004d;
+    overflow: hidden; // qualquer elemento que seja maior que a div será ocultado
+    background: #34495e;
+    color: #fff;    
+}
+
+.trigger{
+    box-sizing: border-box; 
+    position: absolute;
+    width: 400px;
+    height: 10px;
+    left: 0;
+    cursor: pointer;
+}
+
+.plane{
+    position: absolute;
+    z-index: 5;
+    pointer-events: none; // define se o elemento irá ou não reagir a eventos de ponteiro (com none o elemento não reagi a eventos de ponteiro )
+    width: 400px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    background: #e67e22;
+	overflow: hidden;
+    transform-origin: 50% 0; //alteração de posição em eixo x, y, z
+    transition: all 0.4s ease-in-out;
+}
+
+.text-back{
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    width: 400px;
+    top:169px;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700px;
+    text-align: center;
+    color: #fff;
+}
+
+.text-front{
+    @extend .text-back;   //@extend faz com que o elemento herde as caracteristicas do elemento associado
+    z-index: 10;
+    color: transparent;
+    text-shadow: 0 0 10px #ffffffb3;
+    transition: all .4s ease-in-out;
+}
+
+@for $i from 0 through $numberOfTriggers {
+	.trigger-#{$i} {
+		top: (($i - 1) * $offset)+px;
+	
+		&:hover ~ .plane {
+			$scaleY: ( (1 / $numberOfTriggers) * $i);
+			height: ($i * $offset)+px;
+			transition: initial;
+		}
+	}
+}
+
+//@for cria um loop neste caso de 0 a $numberOfTriggers que é uma variavel que vai até 200
+// para cada $i execute o codigo 
+
+//.trigger-#{$i}   Isso gera uma classe CSS dinâmica com base no valor de $i
+
+// top: (($i - 1) * $offset)+px   Esta linha define a posição top da classe .trigger-#{$i}
+
+//&:hover ~ .plane   Este é um seletor que aplica estilos à classe .plane quando a classe .trigger-#{$i} está sendo "hovered".
+
+// $scaleY: ( (1 / $numberOfTriggers) * $i);   $scaleY: ( (1 / $numberOfTriggers) * $i);
+
+// height: ($i * $offset)+px;  Esta linha define a altura da .plane quando um .trigger específico está em "hover".
+
+// transition: initial;   reinicia a animação 
