@@ -41,7 +41,6 @@ export default function HomeViews() {
         </Grid>
       </Box_Container>
     </main>
-
   );
 }
 
