@@ -29,8 +29,6 @@ export const Btn_Neon = () => {
                     <span></span>
                     btn_neon3
                 </a>  nth-child(3) da div */}
-
-
             </div>
      
 

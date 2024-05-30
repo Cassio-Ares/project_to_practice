@@ -1,5 +1,5 @@
 import './styled.css'
-import './style.scss'
+//import './style.scss'
 
 export const Toggle_On_Off = () => {
   return (

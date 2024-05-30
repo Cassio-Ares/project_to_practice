@@ -1,0 +1,165 @@
+// Definição de variáveis
+$primary-color: #3094d9;
+$border-color: #dcdcdc;
+$background-color: #e0e0e0;
+$box-shadow-color: #bebebe;
+$slider-transition: 0.5s;
+$slider-colors: (#49d84e, #e6e6e6, #d2d2d2);
+
+// mixins geral
+@mixin mixin_Property {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: $slider-transition;
+  color: #9a9a9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//Mixin para sliders
+@mixin slider($index, $background, $delay: 0s) {
+  &--#{$index} {
+    background: $background;
+    transition-delay: $delay;
+
+    div {
+      transition: $slider-transition;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      left: 0;
+    }
+  }
+}
+
+.container_toggle {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary-color;
+}
+
+.label_toggle {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 2px solid $border-color;
+  background: $background-color;
+  box-shadow: 7px 7px 23px $box-shadow-color, -7px -7px 23px #fff;
+  overflow: hidden;
+  border-radius: 60px;
+}
+
+.check {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  @include mixin_Property;
+
+  &::before {
+    background: #fff;
+    box-shadow: none;
+  }
+
+  &.slider--0 {
+    color: #fff;
+    font-weight: 600;
+    background: #49d84e;
+  }
+
+  &.slider--1 {
+    transition: $slider-transition;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    background: transparent;
+  }
+
+  //loop .slider
+  @for $i from 1 through length($slider-colors) {
+    @include slider(
+      $i,
+      nth($slider-colors, $i),
+      if($i == 1, 1s, if($i == 2, 0.5s, 0s))
+    );
+  }
+
+  //1 slider
+  &.slider--1 div:first-child { //parte superior 
+    transform: translateY(0);
+    top: 0;
+    background: #2dda3c;
+    transition-delay: 0s;
+  }
+
+  &.slider--1 div:last-child { //parte superior 2
+    transform: translateY(0);
+    bottom: 0;
+    background: #2dda3c;
+    transition-delay: 0s;
+  }
+
+  &.slider--2 {   // meio da animação 
+    background: #e6e6e6;
+    transition-delay: 0.5s;
+    transform: translateX(0);
+    border-left: 1px solid #d2d2d2;
+  }
+
+  &.slider--3 { // parte off
+    background: #e90505;
+    transition-delay: 1s;
+    transform: translateX(0);
+    border-right: 1px solid #e90505;
+  }
+}
+
+input:checked + .slider::before {
+  background: #182386;
+  box-shadow: none;
+}
+
+input:checked + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked ~ .slider--1 div:first-child {
+  transform: translateX(100%);
+  transition-delay: 1s;
+}
+
+input:checked ~ .slider--1 div:last-child {
+  transform: translateY(100%);
+  transition-delay: 1s;
+  background-color: transparent;
+}
+
+input:checked ~ .slider--2 div:last-child {
+  transform: translateY(100%);
+  transition-delay: 3s;
+ } 
+
+input:checked ~ .slider--2 {
+  transform: translateX(100%);
+  transition-delay: 1s;
+   background: #0ae928;
+}
+
+
+input:checked ~ .slider--3 {
+  transform: translateX(-100%);
+  transition-delay: 0s;
+  background: #151615;
+}

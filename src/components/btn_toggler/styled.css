@@ -1,5 +1,5 @@
 .container_toggle{
-     width: 100%;
+    width: 100%;
     height: 50vh;
     display: flex;
     align-items: center;
@@ -45,16 +45,16 @@ input:checked + .slider:before{
 }
 
 input:checked + slider{
-   box-shadow: 0 0 1px #2196f3;
+   box-shadow: 0 0 1px #1b1b1b;
 }
 
-.slider--0{
+.slider--0{  /*final on*/
     color: #fff;
     font-weight: 600;
     background: #49d84e;
 }
 
-.slider--1 div{
+.slider--1 div{ 
     transition: 0.5s;
     position: absolute;
     width: 100%;
@@ -63,12 +63,12 @@ input:checked + slider{
 }
 
 input:checked ~ .slider--1 div:first-child{   /*input:checked ~ .slider--1 div:first-of-type*/
-    transform: translateX(100%);
+    transform: translateX(100%); /*movimento superior no eixo X*/
     transition-delay: 1s;
 }
 
 input:checked ~ .slider--1 div:last-child{
-    transform: translateY(100%);
+    transform: translateY(100%); /*movimento inferior no eixo y*/
     transition-delay: 1s;
 }
 
@@ -78,7 +78,7 @@ input:checked ~ .slider--2 div:last-child{ /*input:checked ~ .slider--1 div:last
     transition-delay: 1s;
 }
 
-input:checked ~ .slider--2{
+input:checked ~ .slider--2{ /*animação no eixo x antes do final on*/
     transform: translateX(100%);
     transition-delay: 0.5s;
 }
@@ -111,7 +111,7 @@ input:checked ~ .slider--3{
 }
 
 .slider--3{
-    background: #d2d2d2;
+    background: #e20505;
     transition-delay: 1s;
     transform: translateX(0);
     border-right: 1px solid #d2d2d2;
