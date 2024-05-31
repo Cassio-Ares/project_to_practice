@@ -1,0 +1,130 @@
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #333;
+  color: #fff;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 145px;
+}
+
+.sliceTitle {
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  transition: all 1s ease-in-out;
+  transform: translateX(0);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.sliceText {
+  @extend .sliceTitle;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.slices {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: url("https://miro.medium.com/v2/resize:fit:720/format:webp/0*K3CZoXdv675RxNiO.jpg");
+  background-size: 400px 400px;
+  cursor: pointer;
+
+  &:hover {
+    .sliceTitle {
+      transform: translateX(-40px);
+    }
+    .sliceText {
+      transform: translateX(40px);
+    }
+    .slice {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /*que é o mesmo que em css criar tudo isso: 
+                                 .slices:hover .sliceTitle,
+                                 .slices:hover .sliceText {
+                                      transform: translateX(-40px);
+                                  }
+
+                                  .slices:hover .sliceTitle {
+                                    transform: translateX(40px);
+                                   }
+
+                                 .slices:hover .slice {
+                                    transform: translateY(0);
+                                    opacity: 1;
+                                 }*/
+
+  .slice {
+    position: relative;
+    z-index: 2;
+    float: left;
+    box-sizing: border-box;
+    width: 50px;
+    height: 400px;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiomn5rn1NgtgXwt9J4_EvvuvhxqDzMh3Wdw-18AnMbR6Hh-XhZrPFSxXllLP5sQ8in2KpLwUAHDRq9W17ROETH4mB1B8Z7_xDnbbO8QQ6CwSSQqshpsaUZ5GsLxabQC7FStBzmdX9oxauz4vNeJcGgJny-X9OhK6QtRwZfpP7Sier-nvce_c9kcDnUBtI/s1920/animes.png");
+    background-size: 400px 400px;
+    transition: all 1s ease-in-out;
+  }
+
+  @for $i from 1 through 8 {
+    $nullBase: $i - 1;
+    .slice-#{$i} {
+      background-position: ($nullBase * -50) + px 0;
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+  }
+
+  @for $i from 1 through 4 {
+    .slice-#{$i * 2} {
+      transform: translateY(40px);
+    }
+  }
+}
+
+// // /*
+// //  Loop from em SCSS
+// //   @for $i from 1 through 8 { criamos um loop for de 1 a 8 = $i vai de 1 a 8 pegado as 8 divs do component
+
+// //     $nullBase: $i - 1; calcula $i - 1;
+
+// //    .slice-#{$i} {   slice-#{$i} gera as classes slice-1, slice-2 ....
+
+// //     background-position: ($nullBase * -50) + px 0;  a partir do loop o calculo faz position se 0px, 0 depois -50px, 0 depois -100px, 0 ...
+// //         transform: translateY(-40px);    
+// //         opacity: 0;
+// //    }
+    
+//    gerando: 
+//    .slice-1 {
+//     background-position: 0px 0;
+//     transform: translateY(-40px);
+//     opacity: 0;
+//   }
+//   .slice-2 {
+//     background-position: -50px 0;
+//     transform: translateY(40px);
+//     opacity: 0;
+//   }
+//   .slice-3 {
+//     background-position: -100px 0;
+//     transform: translateY(-40px);
+//     opacity: 0;
+//   }
+// // }
+// // */
