@@ -1,7 +1,7 @@
 'use client'
 
-//import './styled.css';
-import './style.scss';
+import './styled.css';
+//import './style.scss';
 
 export const CardHover = () => {
     const divs = [];
