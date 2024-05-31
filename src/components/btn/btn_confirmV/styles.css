@@ -41,7 +41,7 @@
     background: #37BE77;
 }
 
-.button img{
+.button .image{
     position: absolute;
     z-index: 2;
     top: 16px;
@@ -101,7 +101,7 @@ input:checked ~ .button{ /* ~ seletor do primeiro irmão seginte no caso quando 
 }
 
 
-input:checked ~ .button img{ /*both os estilos serão aplicados antes e depois da animação*/
+input:checked ~ .button .image{ /*both os estilos serão aplicados antes e depois da animação*/
   animation: check 0.5s ease-out 1.5s both;
 }
 

@@ -46,7 +46,7 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Nav_Link_Contact />
-          </Grid> */}
+          </Grid> 
           <Grid item xs={2} sm={4} md={4}>
             <Slice_Transition />
           </Grid>

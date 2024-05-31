@@ -9,7 +9,7 @@ export const Btn_ConfirmV = () => {
             <div className='container_btn'> 
                <input type="checkbox" className='check_box' id='button' /> 
                   <label htmlFor='button' className='button'>
-                Confirmar<img src="https://100dayscss.com/codepen/checkmark-green.svg" className='img' />
+                Confirmar<img src="https://100dayscss.com/codepen/checkmark-green.svg" className='image' />
                   </label>
               <svg className="cicle">
                 <circle cx="30" cy="30" r="29" />
