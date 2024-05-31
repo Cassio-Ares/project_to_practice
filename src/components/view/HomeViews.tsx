@@ -8,6 +8,7 @@ import { Btn_Neon } from '@/components/btn/btn_neon/Btn_Neon';
 import { Btn_ConfirmV } from '@/components/btn/btn_confirmV/Btn_ConfirmV';
 import { CardHover } from '../cardHover/CardHover';
 import { Toggle_On_Off } from '../btn_toggler/Toggle_On_Off';
+import { Nav_Link_Contact } from "../nav_link_contact/Nav_Link_Contact";
 
 
 
@@ -37,6 +38,9 @@ export default function HomeViews() {
           </Grid>
           <Grid item xs={2} sm={4} md={4}>
             <Toggle_On_Off />
+          </Grid>
+          <Grid item xs={2} sm={4} md={4}>
+            <Nav_Link_Contact />
           </Grid>
         </Grid>
       </Box_Container>

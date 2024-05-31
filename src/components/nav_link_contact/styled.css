@@ -1,0 +1,108 @@
+.Container_icon{
+    display: flex;
+    height: 50vh; 
+    place-items: center;
+     color: black;
+     background: linear-gradient(315deg, #645858, #d1e1ec)  
+}
+
+.Container_icon:focus,
+.Container_icon:active{
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container_flex{
+    display: inline-flex;  
+}
+
+.container_flex .icons{ /*circle icon */
+  position: relative;
+  background: #fff; 
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container_flex .name{ /*estiliza o nome*/
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  font-weight: bolder;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);  
+   opacity: 0;   /*oculta o nome*/
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container_flex .icons:hover .name{ /*faz com que nome suba e apareça sobre o icone*/
+    top: -35px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.container_flex .name::before{ /*cria um icone na parte baixa do nome */
+    position: absolute;
+    content: '';
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%; /* centraliza o content no centro */
+    transform: translateX(-50%) rotate(45deg); 
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container_flex .icons:hover span,
+.container_flex .icons:hover .name{
+    text-shadow: 0px -1px 0px rgb(0, 0, 0, 0.1);
+}
+
+.container_flex .facebook:hover,
+.container_flex .facebook:hover .name,
+.container_flex .facebook:hover .name::before{ /*com hover colore o icone*/
+    background: #3b5999;
+    color: #fff;
+}
+
+.container_flex .xtwitter:hover,
+.container_flex .xtwitter:hover .name,
+.container_flex .xtwitter:hover .name::before{
+    background: #0F1318;
+    color: #fff;
+}
+
+.container_flex .instagram:hover,
+.container_flex .instagram:hover .name,
+.container_flex .instagram:hover .name::before{
+    background: #e1306c;
+    color: #fff;
+}
+
+.container_flex .gitHub:hover,
+.container_flex .gitHub:hover .name,
+.container_flex .gitHub:hover .name::before{
+    background: #333;
+    color: #fff;
+}
+
+.container_flex .youtube:hover,
+.container_flex .youtube:hover .name,
+.container_flex .youtube:hover .name::before{
+    background: #de463b;
+    color: #fff;
+}
