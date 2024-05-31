@@ -1,5 +1,5 @@
-//import './styled.css';
-import './styled.scss';
+import './styled.css';
+//import './styled.scss';
 
 export const Slice_Transition = () => {
   return (
