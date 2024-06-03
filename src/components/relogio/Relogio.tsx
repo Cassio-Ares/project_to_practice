@@ -1,4 +1,5 @@
-import './styles.css';
+//import './styles.css';
+import './styles.scss';
 
 export const Relogio = () => {
   return (
@@ -23,7 +24,6 @@ export const Relogio = () => {
         <div className="strap-2"></div>
         <div className="back-strap"></div>
         <div className="button-1"></div>
-        <div className="button-hide"></div>
         <div className="button-2"></div>
      </div>
     </div>
