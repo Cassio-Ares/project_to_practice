@@ -10,6 +10,7 @@ import { CardHover } from '../cardHover/CardHover';
 import { Toggle_On_Off } from '../btn_toggler/Toggle_On_Off';
 import { Nav_Link_Contact } from "../nav_link_contact/Nav_Link_Contact";
 import { Slice_Transition } from "../slice_transition/Slice_Transition";
+import { Relogio } from "../relogio/Relogio";
 
 
 
@@ -50,6 +51,9 @@ export default function HomeViews() {
           <Grid item xs={2} sm={4} md={4}>
             <Slice_Transition />
           </Grid>
+          <Grid item xs={2} sm={4} md={4}>
+            <Relogio />
+          </Grid> 
           
         </Grid>
       </Box_Container>
