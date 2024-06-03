@@ -11,6 +11,7 @@ import { Toggle_On_Off } from '../btn_toggler/Toggle_On_Off';
 import { Nav_Link_Contact } from "../nav_link_contact/Nav_Link_Contact";
 import { Slice_Transition } from "../slice_transition/Slice_Transition";
 import { Relogio } from "../relogio/Relogio";
+import { Galery_Social } from "../galery_social/Galery_Social";
 
 
 
@@ -29,7 +30,7 @@ export default function HomeViews() {
 
       <Box_Container sx={{ flexGrow: 1 }}>
         <Grid container spacing={{ xs: 3, md: 10 }} columns={{ xs: 4, sm: 10, md: 12 }}>
-          <Grid item xs={2} sm={4} md={4}>
+          {/* <Grid item xs={2} sm={4} md={4}>
             <Btn_Neon />
           </Grid>
 
@@ -53,6 +54,10 @@ export default function HomeViews() {
           </Grid>
           <Grid item xs={2} sm={4} md={4}>
             <Relogio />
+          </Grid>  */}
+
+          <Grid item xs={2} sm={4} md={4}>
+            <Galery_Social />
           </Grid> 
           
         </Grid>
