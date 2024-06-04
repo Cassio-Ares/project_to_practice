@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './stylesGalery.css'
 
+import { FaPhone, FaComment,FaHeart } from "react-icons/fa6";
+
 export const  Galery_Social = () => {
     const [isDetailActive, setDetailActive] = useState(false);
 
@@ -47,13 +49,13 @@ export const  Galery_Social = () => {
                     <div className="name">Cassio</div>
                     <div className="action">
                         <div className='btn'>
-                            <span className='fa fa-phone'></span>
+                            <span className='fa fa-phone'><FaPhone/></span>
                         </div>
                         <div className='btn'>
-                            <span className='fa fa-comment'></span>
+                            <span className='fa fa-comment'><FaComment/></span>
                         </div>
                         <div className='btn'>
-                            <span className='fa fa-heart'></span>
+                            <span className='fa fa-heart'><FaHeart/></span>
                         </div>
                     </div>
                 </div>
