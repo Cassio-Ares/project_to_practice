@@ -18,6 +18,7 @@
   height: 194px;
   margin: 4px 0 0 4px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .profile img{
@@ -81,7 +82,6 @@
 }
 
 .detail {
-  display: none;
   position: absolute;
   z-index: 2;
   top: 0;
@@ -93,7 +93,7 @@
   font-size: 0;
 }
 
-.detail .action {
+.detail.active { /*reativa o event para poder usar o close*/
   pointer-events: all;
 }
 
@@ -120,7 +120,7 @@
 .detail .close {
   position: absolute;
   background: #025ef5;
-  z-index: 2;
+  z-index: 5;
   width: 50px;
   height: 50px;
   top: 10px;
