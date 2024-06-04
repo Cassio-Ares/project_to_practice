@@ -16,8 +16,6 @@ import { Troca_Css } from "../troca_de_estilo_c_click/troca_com_css/Troca_Css";
 import { Troca_com_styled_component } from "../troca_de_estilo_c_click/troca_com_styled_component/Troca_com_styled_component";
 
 
-
-
 export default function HomeViews() {
   return (
     <main>
@@ -56,7 +54,11 @@ export default function HomeViews() {
           </Grid>
           <Grid item xs={2} sm={4} md={4}>
             <Relogio />
-          </Grid>
+          </Grid>  
+
+          <Grid item xs={2} sm={4} md={4}>
+            <Galery_Social />
+          </Grid> */}
 
           <Grid item xs={2} sm={4} md={4}>
             <Troca_Css />
@@ -64,10 +66,9 @@ export default function HomeViews() {
           </Grid>
           
           <Grid item xs={2} sm={4} md={4}>
-            <Galery_Social />
-          </Grid>
-
-
+            <Troca_com_styled_component />
+          </Grid> 
+          
         </Grid>
       </Box_Container>
     </main>
