@@ -1,6 +1,7 @@
 import './styles.css'
 
 export const Galery_Social = () => {
+    
     return (
         <div className='container'> {/* // /**frame */}
             <div className="profile" id='profile-1'>
@@ -50,3 +51,5 @@ export const Galery_Social = () => {
         </div>
     )
 }
+
+
