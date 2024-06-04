@@ -58,7 +58,7 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Galery_Social />
-          </Grid> */}
+          </Grid> 
 
           <Grid item xs={2} sm={4} md={4}>
             <Troca_Css />
