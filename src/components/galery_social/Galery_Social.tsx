@@ -1,10 +1,20 @@
-import './styles.css'
+import { useState } from 'react';
+import './stylesGalery.css'
 
-export const Galery_Social = () => {
-    
+export const  Galery_Social = () => {
+    const [isDetailActive, setDetailActive] = useState(false);
+
+    const handleProfileClick = () => {
+        setDetailActive(true);
+    };
+
+    const handleCloseClick = () => {
+        setDetailActive(false);
+    };
+
     return (
-        <div className='container'> {/* // /**frame */}
-            <div className="profile" id='profile-1'>
+        <div className='container'>
+            <div className="profile" onClick={handleProfileClick}>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ02mof1BT5P7qOliU3-5MFdlN59V6yzB6vnw&s" alt="" />
                 <div className="overlay"></div>
                 <div className="plus"></div>
@@ -25,8 +35,8 @@ export const Galery_Social = () => {
                 <div className="plus"></div>
             </div>
 
-            <div className="detail" id="detail_1">
-                <div className="close"></div>
+            <div className={`detail ${isDetailActive ? 'active' : ''}`} id="detail_1">
+                <div className="close" onClick={handleCloseClick}></div>
                 <img src="https://static.preparaenem.com/2022/08/paisagem-natural-suica.jpg" alt="" className="header" />
 
                 <div className='image'>
@@ -49,7 +59,8 @@ export const Galery_Social = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
 
 
