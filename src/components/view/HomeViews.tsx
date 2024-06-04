@@ -16,8 +16,6 @@ import { Troca_Css } from "../troca_de_estilo_c_click/troca_com_css/Troca_Css";
 import { Troca_com_styled_component } from "../troca_de_estilo_c_click/troca_com_styled_component/Troca_com_styled_component";
 
 
-
-
 export default function HomeViews() {
   return (
     <main>
@@ -32,7 +30,7 @@ export default function HomeViews() {
 
       <Box_Container sx={{ flexGrow: 1 }}>
         <Grid container spacing={{ xs: 3, md: 10 }} columns={{ xs: 4, sm: 10, md: 12 }}>
-          {/* <Grid item xs={2} sm={4} md={4}>
+          <Grid item xs={2} sm={4} md={4}>
             <Btn_Neon />
           </Grid>
 
@@ -64,7 +62,7 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Troca_com_styled_component />
-          </Grid>  */}
+          </Grid> 
 
           <Grid item xs={2} sm={4} md={4}>
             <Galery_Social />
