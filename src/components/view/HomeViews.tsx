@@ -54,21 +54,17 @@ export default function HomeViews() {
           </Grid>
           <Grid item xs={2} sm={4} md={4}>
             <Relogio />
-          </Grid>  
-
-          <Grid item xs={2} sm={4} md={4}>
-            <Galery_Social />
-          </Grid> 
+          </Grid>
 
           <Grid item xs={2} sm={4} md={4}>
             <Troca_Css />
             <Troca_com_styled_component />
           </Grid>
-          
+
           <Grid item xs={2} sm={4} md={4}>
-            <Troca_com_styled_component />
-          </Grid> 
-          
+            <Galery_Social />
+          </Grid>
+
         </Grid>
       </Box_Container>
     </main>
