@@ -3,6 +3,7 @@ import './stylesGalery.css'
 
 import { FaPhone, FaComment,FaHeart } from "react-icons/fa6";
 
+
 export const  Galery_Social = () => {
     const [isDetailActive, setDetailActive] = useState(false);
 
