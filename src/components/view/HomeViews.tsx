@@ -21,18 +21,18 @@ import { Troca_com_styled_component } from "../troca_de_estilo_c_click/troca_com
 export default function HomeViews() {
   return (
     <main>
-    <Container_text>
-      <H1>Bem-vindo ao meu projeto de estilização!</H1>
-      <P>A ideia deste projeto é praticar e aprimorar minhas habilidades em CSS e Sass,
-        reunindo diversos recursos de estilização em um único repositório no GitHub.
-        Este é um exercício contínuo de aprendizado e melhoria, e estou animado para
-        compartilhar essa jornada com a comunidade. Toda sugestão e feedback são bem-vindos!OBS: EM CONSTRUÇÃO <LuConstruction /> </P>
-      <Git_Link href='https://github.com/Cassio-Ares/project_to_practice.git' target='_blank'>Acesse ao repositório</Git_Link>
+      <Container_text>
+        <H1>Bem-vindo ao meu projeto de estilização!</H1>
+        <P>A ideia deste projeto é praticar e aprimorar minhas habilidades em CSS e Sass,
+          reunindo diversos recursos de estilização em um único repositório no GitHub.
+          Este é um exercício contínuo de aprendizado e melhoria, e estou animado para
+          compartilhar essa jornada com a comunidade. Toda sugestão e feedback são bem-vindos!OBS: EM CONSTRUÇÃO <LuConstruction /> </P>
+        <Git_Link href='https://github.com/Cassio-Ares/project_to_practice.git' target='_blank'>Acesse ao repositório</Git_Link>
       </Container_text>
 
       <Box_Container sx={{ flexGrow: 1 }}>
         <Grid container spacing={{ xs: 3, md: 10 }} columns={{ xs: 4, sm: 10, md: 12 }}>
-          {/* <Grid item xs={2} sm={4} md={4}>
+          <Grid item xs={2} sm={4} md={4}>
             <Btn_Neon />
           </Grid>
 
@@ -50,26 +50,24 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Nav_Link_Contact />
-          </Grid> 
+          </Grid>
           <Grid item xs={2} sm={4} md={4}>
             <Slice_Transition />
           </Grid>
           <Grid item xs={2} sm={4} md={4}>
             <Relogio />
-          </Grid>  
-
-          <Grid item xs={2} sm={4} md={4}>
-            <Galery_Social />
-          </Grid> */}
+          </Grid>
 
           <Grid item xs={2} sm={4} md={4}>
             <Troca_Css />
-          </Grid> 
-
-          <Grid item xs={2} sm={4} md={4}>
             <Troca_com_styled_component />
-          </Grid> 
+          </Grid>
           
+          <Grid item xs={2} sm={4} md={4}>
+            <Galery_Social />
+          </Grid>
+
+
         </Grid>
       </Box_Container>
     </main>

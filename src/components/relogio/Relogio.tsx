@@ -1,9 +1,9 @@
-//import './styles.css';
-import './styles.scss';
+import './styles.css';
+//import './styles.scss';
 
 export const Relogio = () => {
   return (
-    <div className='container'>
+    <div className='containerRelogio'>
      <div className="main-dial">
         <div className="screen"></div>
         <div className="hands"></div>

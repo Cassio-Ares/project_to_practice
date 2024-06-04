@@ -1,0 +1,16 @@
+.btn{
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s;   
+    margin: 50px;
+}
+
+.clicked {
+    background-color: red;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #0005);
+    padding: 10px 35px;
+  }
