@@ -14,6 +14,7 @@ import { Relogio } from "../relogio/Relogio";
 import { Galery_Social } from "../galery_social/Galery_Social";
 import { Troca_Css } from "../troca_de_estilo_c_click/troca_com_css/Troca_Css";
 import { Troca_com_styled_component } from "../troca_de_estilo_c_click/troca_com_styled_component/Troca_com_styled_component";
+import { Neomorphism_Animation } from "../neomorphism_animation/Neomorphism_Animation";
 
 
 export default function HomeViews() {
@@ -30,7 +31,7 @@ export default function HomeViews() {
 
       <Box_Container sx={{ flexGrow: 1 }}>
         <Grid container spacing={{ xs: 3, md: 10 }} columns={{ xs: 4, sm: 10, md: 12 }}>
-          <Grid item xs={2} sm={4} md={4}>
+          {/* <Grid item xs={2} sm={4} md={4}>
             <Btn_Neon />
           </Grid>
 
@@ -63,8 +64,11 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Galery_Social />
-          </Grid>
+          </Grid> */}
 
+          <Grid item xs={2} sm={4} md={4}>
+            <Neomorphism_Animation/>
+          </Grid>
         </Grid>
       </Box_Container>
     </main>

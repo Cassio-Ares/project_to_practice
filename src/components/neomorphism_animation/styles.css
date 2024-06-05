@@ -1,0 +1,52 @@
+.containerNeomo{
+    background: #ebe3e3;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px
+}
+
+.box{
+    background: #f0f0f0;
+    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 0 #cccccc, 0 0 0 #fff, 10px 10px 10px #cccccc inset,  /*este box-shadow cria um efeito como se fosse uma gota*/
+    -10px -10px 10px #fff inset;
+    animation: neomo 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
+}
+
+ @keyframes neomo {
+    0%{
+        width: 60px;
+        height: 60px;
+        background: #f0f0f0;
+        box-shadow: 0 0 0 #cccccc, 0 0 0 #fff, 10px 10px 10px #cccccc inset,
+        -10px -10px 10px #fff inset;
+    }
+    25%{
+        background: #f8f8f8;
+        width: 60px;
+        height: 60px;
+        box-shadow: 10px 10px 10px #cccccc, 10px 10px 10px #fff, 0 0 0 #cccccc inset,
+        0 0 0 #fff inset;
+    }
+    /*até os 25% em função do box shadow cria um efeito de como se a gota quicasse na pagina */
+
+   50%{
+        background: #f8f8f8;
+        height: 240px;
+        width: 60px;
+        box-shadow: 10px 10px 10px #cccccc, 10px 10px 10px #fff, 0 0 0 #cccccc inset,
+        0 0 0 #fff inset;
+    }
+    100%{
+        background: #fafafa;
+        height: 240px;
+        width: 240px;
+        box-shadow: 40px 40px 40px #cccccc, 0 0 0 #fff, 0 0 0 #cccccc inset,
+        2px 2px 2px #fff inset;
+    }
+}
