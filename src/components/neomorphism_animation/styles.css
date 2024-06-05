@@ -1,11 +1,11 @@
 .containerNeomo{
     background: #ebe3e3;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 400px;
-    height: 400px
+    height: 400px;
+    margin-top: 50px;
 }
 
 .box{
