@@ -6,7 +6,9 @@ $box-shadow-color: #bebebe;
 $slider-transition: 0.5s;
 $slider-colors: (#49d84e, #e6e6e6, #d2d2d2);
 
-// mixins geral
+// mixins geral (é como se construissemos uma variavel que carrega uma estrutura de estilo que pode se usada 
+// com o termo @include e o nome do mixin )
+
 @mixin mixin_Property {
   position: absolute;
   cursor: pointer;
@@ -65,7 +67,7 @@ $slider-colors: (#49d84e, #e6e6e6, #d2d2d2);
 }
 
 .slider {
-  @include mixin_Property;
+  @include mixin_Property; 
 
   &::before {
     background: #fff;
