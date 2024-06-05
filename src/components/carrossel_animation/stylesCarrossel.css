@@ -1,0 +1,108 @@
+.containerCarrossel{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+	background: #5a717b;
+	color: #fff;
+    margin-top: 50px;
+}
+
+.center{
+    /* background: #fff; */
+    position: absolute;
+    height: 130px;
+    width: 400px;
+    top: 135px;
+    left: 0;
+    transform: perspective(60px);
+    transform-style: preserve-3d;
+}
+
+.card{
+    background: #fff; 
+    position: absolute;
+    width: 140px;
+    height: 130px;
+    top: 0;
+    left: 130px;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+.top{
+    width: 100%;
+    height: 30px;
+    background-color: #6cb0ce;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: black;
+}
+
+.card-1{
+    animation: carrossel-1 5s ease-in-out infinite both;
+}
+
+.card-2{
+    animation: carrossel-2 5s ease-in-out infinite both;
+}
+
+.card-3{
+    animation: carrossel-3 5s ease-in-out infinite both;
+}
+
+@keyframes carrossel-1 {
+	0%,
+	100% {
+		transform: translate3d(0, 0, 0);
+		box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.2);
+	}
+	33.33% {
+		transform: translate3d(145px, 0, -45px);
+		box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+	}
+	66.66% {
+		transform: translate3d(-145px, 0, -45px);
+		box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+	}
+}
+
+@keyframes carrossel-2 {
+	0%,
+	100% {
+		transform: translate3d(145px, 0, -45px);
+		box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+	}
+	33.33% {
+		transform: translate3d(-145px, 0, -45px);
+		box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+	}
+	66.66% {
+		transform: translate3d(0, 0, 0);
+		box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.2);
+	}
+}
+
+@keyframes carrossel-3 {
+	0%,
+	100% {
+		transform: translate3d(-145px, 0, -45px);
+		box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+	}
+	33.33% {
+		transform: translate3d(0, 0, 0);
+		box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.2);
+	}
+	66.66% {
+		transform: translate3d(145px, 0, -45px);
+		box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+	}
+}

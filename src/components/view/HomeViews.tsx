@@ -15,6 +15,7 @@ import { Galery_Social } from "../galery_social/Galery_Social";
 import { Troca_Css } from "../troca_de_estilo_c_click/troca_com_css/Troca_Css";
 import { Troca_com_styled_component } from "../troca_de_estilo_c_click/troca_com_styled_component/Troca_com_styled_component";
 import { Neomorphism_Animation } from "../neomorphism_animation/Neomorphism_Animation";
+import { Carrossel_animation } from "../carrossel_animation/Carrossel_animation";
 
 
 export default function HomeViews() {
@@ -69,6 +70,11 @@ export default function HomeViews() {
           <Grid item xs={2} sm={4} md={4}>
             <Neomorphism_Animation />
           </Grid>
+
+          <Grid item xs={2} sm={4} md={4}>
+            <Carrossel_animation />
+          </Grid>
+
         </Grid>
       </Box_Container>
     </main>
