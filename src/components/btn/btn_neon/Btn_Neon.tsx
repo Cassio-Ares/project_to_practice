@@ -1,6 +1,5 @@
-'use client'
-import './style.css'
-
+import './styleNeon.css'
+//import './stylesNeon.scss'
 
 export const Btn_Neon = () => {
     return (
