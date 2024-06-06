@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import './stylesGalery.css'
+//import './stylesGalery.css';
+import './stylesGalery.scss';
 
 import { FaPhone, FaComment,FaHeart } from "react-icons/fa6";
 

@@ -62,7 +62,7 @@
   top: 24px;
   left: 18px;
 }
-.profile .plus:after { /*parte da cruz no meio do circulo*/
+.profile .plus::after { /*parte da cruz no meio do circulo*/
   position: absolute;
   content: "";
   width: 2px;
@@ -131,7 +131,7 @@
   cursor: pointer;
 }
 
-.detail .close:before {
+.detail .close::before {
   position: absolute;
   content: "";
   width: 14px;
@@ -141,7 +141,7 @@
   background: #fff;
   transition: all 0.3s ease-in-out;
 }
-.detail .close:after {
+.detail .close::after {
   position: absolute;
   content: "";
   width: 2px;
@@ -156,8 +156,8 @@
   background: #fff;
 }
 
-.detail .close:hover:after,
-.detail .close:hover:before {
+.detail .close:hover::after,
+.detail .close:hover::before {
     background: #025ef5;
 }
 
