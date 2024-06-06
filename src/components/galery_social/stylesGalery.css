@@ -57,7 +57,7 @@
   top: 24px;
   left: 18px;
 }
-.profile .plus:after { /*parte da cruz no meio do circulo*/
+.profile .plus::after { /*parte da cruz no meio do circulo*/
   position: absolute;
   content: "";
   width: 2px;
@@ -69,7 +69,7 @@
 
 .profile:hover .plus {
   opacity: 1;
-   transform: scale(1) /* translate3d(0, 0, 0);  */
+   transform: scale(1)  translate3d(0, 0, 0);  
 }
 
 .profile:hover .overlay { /*pega over que tinha 0 de opacity e coloca 0.4*/
@@ -98,7 +98,7 @@
 }
 
 .detail.active .image {
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);   /*translete3d desloca o elemento em um campo tridimensional x,y,z*/
   transition: all 0.6s ease-out 0.3s;
 }
 
@@ -126,7 +126,7 @@
   cursor: pointer;
 }
 
-.detail .close:before {
+.detail .close::before {
   position: absolute;
   content: "";
   width: 14px;
@@ -136,7 +136,7 @@
   background: #fff;
   transition: all 0.3s ease-in-out;
 }
-.detail .close:after {
+.detail .close::after {
   position: absolute;
   content: "";
   width: 2px;
@@ -151,8 +151,8 @@
   background: #fff;
 }
 
-.detail .close:hover:after,
-.detail .close:hover:before {
+.detail .close:hover::after,
+.detail .close:hover::before {
     background: #025ef5;
 }
 
