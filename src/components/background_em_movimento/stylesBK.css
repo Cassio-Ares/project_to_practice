@@ -1,0 +1,40 @@
+.container_background{
+  position: relative;
+  background: #333;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* div[class^='']  sig seleciona as divs com uma class(class^=) que comece com 'name'*/
+
+div[class^="bk"]{  
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 0;
+    top:0;
+}
+
+.bk-1{
+    background: #77c8c0;
+    background: linear-gradient(135deg, #77c8c0 0%, #267aac 100%); 
+}
+
+.bk-2{
+ z-index: 2;
+ opacity: 0;
+ background: #4ad7b8;
+ background: linear-gradient(135deg, #4ad7b8 0%, #f39c12 100%);
+animation: gradient 5s ease-in-out infinite ;
+} 
+
+@keyframes gradient {
+    0%,
+    100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
