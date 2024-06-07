@@ -1,0 +1,43 @@
+$colorOneA: #77c8c0;
+$colorOneB: #267aac;
+$colorTwoA: #4ad7b8;
+$colorTwoB: #f39c12;
+
+@mixin gradient($color1, $color2){
+  background: $color1;
+  background: linear-gradient(135deg, $color1 0%, $color2 100%);
+}
+
+.container_background{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+div[class^='bk']{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+.bk-1{
+    @include gradient($colorOneA,$colorOneB)
+}
+
+.bk-2{
+    @include gradient($colorTwoA,$colorTwoB );
+    z-index:2;
+    opacity: 0;
+    animation: gradient 4s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0%,
+    100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
