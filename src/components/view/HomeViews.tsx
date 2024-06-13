@@ -18,6 +18,7 @@ import { Neomorphism_Animation } from "../neomorphism_animation/Neomorphism_Anim
 import { Carrossel_animation } from "../carrossel_animation/Carrossel_animation";
 import { Elemento_seguindo_mouse } from "../ponto_que_segue_mouse/Elemento_seguindo_mouse";
 import { Background_em_movimento } from "../background_em_movimento/Background_em_movimento";
+import { Dado_hover } from "../dado_hover/Dado_hover";
 
 
 export default function HomeViews() {
@@ -34,7 +35,7 @@ export default function HomeViews() {
 
       <Box_Container sx={{ flexGrow: 1 }}>
         <Grid container spacing={{ xs: 3, md: 10 }} columns={{ xs: 4, sm: 10, md: 12 }}>
-          <Grid item xs={2} sm={4} md={4}>
+           <Grid item xs={2} sm={4} md={4}>
             <Btn_Neon />
           </Grid>
 
@@ -65,7 +66,7 @@ export default function HomeViews() {
             <Troca_com_styled_component />
           </Grid>
 
-          <Grid item xs={2} sm={4} md={4}>
+           <Grid item xs={2} sm={4} md={4}>
             <Galery_Social />
           </Grid>
 
@@ -73,9 +74,9 @@ export default function HomeViews() {
             <Neomorphism_Animation />
           </Grid>
 
-          <Grid item xs={2} sm={4} md={4}>
+           <Grid item xs={2} sm={4} md={4}>
             <Carrossel_animation />
-          </Grid>
+          </Grid>  
 
           <Grid item xs={2} sm={4} md={4}>
             <Elemento_seguindo_mouse />
@@ -83,6 +84,10 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Background_em_movimento />
+          </Grid> 
+
+          <Grid item xs={2} sm={4} md={4}>
+            <Dado_hover />
           </Grid>
 
         </Grid>

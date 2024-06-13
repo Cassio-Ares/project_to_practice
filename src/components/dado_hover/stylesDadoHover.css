@@ -1,0 +1,70 @@
+.container_dado_hover {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  background: rgb(21,116,213);
+  background: radial-gradient(circle, rgba(21,116,213,1) 23%, rgba(21,213,193,0.9806297387969628) 54%, rgba(21,116,213,1) 85%);
+}
+
+.center_dado {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 100px;
+    left: 100px;
+    perspective: 1000px;
+}
+
+.cube {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px) rotateX(70deg) rotateZ(-45deg);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+
+.cube:hover {
+  transform: translateZ(-100px) rotateX(-120deg) rotateZ(135deg);
+}
+
+.cube .lados {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+ }
+
+.cube .frente {
+  transform: rotateY(0deg) translateZ(100px);
+  background: #c4c1c1;
+}
+
+.cube .atras {
+  transform: rotateX(180deg) translateZ(100px);
+  background: #d8d8d3;
+}
+
+.cube .direita {
+    transform: rotateY(90deg) translateZ(100px);
+    background: #fff;
+}
+
+.cube .esquerda {
+    transform: rotateY(-90deg) translateZ(100px);
+   background: #eee;
+}
+
+.cube .top {
+    transform: rotateX(90deg) translateZ(100px);
+    background: #eee;
+}
+
+.cube .baixo {
+    transform: rotateX(-90deg) translateZ(100px);
+    background: #ddd;
+  }
+
+
