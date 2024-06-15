@@ -1,0 +1,99 @@
+.container_hover_diagonal{
+  margin: 50px;
+  width: 400px;
+  height: 200px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container_hover_diagonal_card{
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 5px;
+  min-height: 230px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+} 
+
+.container_hover_diagonal_card .title_diagonal_card{
+    background: #333;
+    border: 2px solid #fff;
+    margin: 0;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.container_hover_diagonal_card::before,
+.container_hover_diagonal_card::after{
+    position: absolute;
+    width: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.35s ease;
+    background: #000;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    content: '';
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.container_hover_diagonal_card::after{
+ transform: skew(45deg) translateX(155%);
+}
+
+.container_hover_diagonal_card::before{
+    transform: skew(45deg) translateX(-155%);
+}
+
+.container_hover_diagonal_card .image_hover_diagonal_card{
+    width: 250px;
+    height: 230px;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    max-width: 100%;
+    vertical-align: top;
+ }
+
+ .container_hover_diagonal_card .figcaption_hover_diagonal_card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0;
+  box-shadow: 0 0 10px #000;
+ }
+
+ .link_hover_diagonal_card{
+    position: absolute;
+    background: #000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+ }
+
+ .container_hover_diagonal_card:hover .image_hover_diagonal_card{
+   opacity: 0.5;
+ }
+
+
+ .container_hover_diagonal_card:hover:before{
+    transform: skew(45deg) translateX(-55%);
+ }
+
+ .container_hover_diagonal_card:hover:after{
+    transform: skew(45deg) translateX(55%);
+ }
+
+ .container_hover_diagonal_card:hover .figcaption_hover_diagonal_card{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+ }

@@ -20,6 +20,7 @@ import { Elemento_seguindo_mouse } from "../ponto_que_segue_mouse/Elemento_segui
 import { Background_em_movimento } from "../background_em_movimento/Background_em_movimento";
 import { Dado_hover } from "../dado_hover/Dado_hover";
 import { Card_Hover_Show_Data } from "../card_hover_show_data/Card_Hover_Show_Data";
+import { Card_Hover_Diagonal_Show } from "../card_hover_diagonal_show/Card_Hover_Diagonal_Show";
 
 
 export default function HomeViews() {
@@ -94,6 +95,11 @@ export default function HomeViews() {
           <Grid item xs={2} sm={4} md={4}>
             <Card_Hover_Show_Data />
           </Grid>
+
+          <Grid item xs={2} sm={4} md={4}>
+            <Card_Hover_Diagonal_Show />
+          </Grid>
+
 
         </Grid>
       </Box_Container>
