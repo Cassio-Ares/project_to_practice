@@ -1,0 +1,65 @@
+.water_drop_container{
+    background: #318cfe;
+    position: relative;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.water_drop_container .water_drop{
+  position: absolute;
+  background: #54abfb;
+  width: 130px;
+  height: 130px;
+  opacity: 0.8;
+  border: 2px solid #3d93ff;
+  border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+}
+
+.water_drop_container .water_drop::before{
+   content: '';
+   position: absolute; 
+   background: #318cfe;
+   height: 100%;
+   width: 100%;
+   border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+   box-shadow: -20px 30px 16px #1b6cfb, -40px 60px 32px #1b6cfb, inset -6px 6px 10px #1b6cfb,
+   inset 2px 6px 10px #1a74e5, inset 20px -20px 22px #fff, inset 40px -40px 44px #a8ceff;
+}
+
+.water_drop_container .water_drop::after{
+    content: '';
+    position: absolute;
+    background: #e6fdfb;
+    height: 25px;
+    width: 25px;
+    border-radius: 44% 56% 46% 54% /36% 50% 50% 64%;
+    left: 80px;
+    top: 40px;
+    box-shadow: 16px 25px 0 -8px #fff;
+}
+
+.water_drop_container .drop-1{
+  left: 40px;
+  top: 60px;
+}
+
+.water_drop_container .drop-2{
+    right: 20px;
+    top:110px ;
+    /* z-index: -1; */
+    border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+}
+
+.water_drop_container .drop-2::before{
+    border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+}
+
+.water_drop_container .title_water_drop{
+  font-size: 60px;
+  color: #e6fdfb;
+  
+}  

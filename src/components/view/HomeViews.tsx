@@ -22,6 +22,7 @@ import { Dado_hover } from "../dado_hover/Dado_hover";
 import { Card_Hover_Show_Data } from "../card_hover_show_data/Card_Hover_Show_Data";
 import { Card_Hover_Diagonal_Show } from "../card_hover_diagonal_show/Card_Hover_Diagonal_Show";
 import { Tabela_de_Precos } from "../tabela_de_precos/Tabela_de_Precos";
+import { Water_Drop } from "../water_drop/Water_Drop";
 
 
 export default function HomeViews() {
@@ -38,7 +39,7 @@ export default function HomeViews() {
 
       <Box_Container sx={{ flexGrow: 1 }}>
         <Grid container spacing={{ xs: 3, md: 10 }} columns={{ xs: 4, sm: 10, md: 12 }}>
-           <Grid item xs={2} sm={4} md={4}>
+          <Grid item xs={2} sm={4} md={4}>
              <Btn_Neon />
           </Grid>
 
@@ -103,6 +104,10 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Tabela_de_Precos />
+          </Grid>
+
+          <Grid item xs={2} sm={4} md={4}>
+            <Water_Drop/>
           </Grid>
 
 
