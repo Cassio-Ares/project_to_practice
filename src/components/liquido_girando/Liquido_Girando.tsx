@@ -1,4 +1,5 @@
-import './stylesLiquido_girando.css';
+//import './stylesLiquido_girando.css';
+import './stylesLiquido_girando.scss';
 
 export const Liquido_Girando = () => {
     const bolha = [];
@@ -19,8 +20,11 @@ export const Liquido_Girando = () => {
     return (
         <div className='container_liquido'>
             <div className="center">
-                {bolha}
-                {spak}
+                <div className="ball"></div>
+                    {bolha}
+                    {spak}
+                
+
             </div>
         </div>
     )
