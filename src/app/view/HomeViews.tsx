@@ -23,6 +23,7 @@ import { Card_Hover_Show_Data } from "../../components/card_hover_show_data/Card
 import { Card_Hover_Diagonal_Show } from "../../components/card_hover_diagonal_show/Card_Hover_Diagonal_Show";
 import { Tabela_de_Precos } from "../../components/tabela_de_precos/Tabela_de_Precos";
 import { Water_Drop } from "../../components/water_drop/Water_Drop";
+import { Liquido_Girando } from "@/components/liquido_girando/Liquido_Girando";
 
 
 export default function HomeViews() {
@@ -108,8 +109,11 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Water_Drop/>
+          </Grid> 
+          
+          <Grid item xs={2} sm={4} md={4}>
+            <Liquido_Girando/>
           </Grid>
-
 
         </Grid>
       </Box_Container>
