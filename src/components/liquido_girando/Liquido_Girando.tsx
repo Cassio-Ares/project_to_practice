@@ -23,8 +23,6 @@ export const Liquido_Girando = () => {
                 <div className="ball"></div>
                     {bolha}
                     {spak}
-                
-
             </div>
         </div>
     )
