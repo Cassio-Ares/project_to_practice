@@ -1,27 +1,28 @@
 import './stylesDobraEspacial.scss';
 
 export const Dobra_Espacial = () => {
-  let vortex = []
-  let linhas = []
+  const vortex = []
 
-  for(let i = 1; i <= 30; i++){
+  for (let i = 1; i <= 30; i++) {
+    const classvortex = `vortex vortex-${i}`
+    const linhas = []
+    for (let j = 1; j <= 24; j++) {
+      const classLinhas = `linhas linhas-${j}`
+      linhas.push(<div key={j} className={classLinhas}></div>)
+    }
     vortex.push(
-        <div key={`vortex-${i}`} className={`vortex  vortex-${i}`} ></div>
+      <div key={i} className={classvortex}>
+        {linhas}
+      </div>
     )
   }
 
-  for(let i = 1; i <= 24; i++){
-    linhas.push(
-        <div key={`linhas-${i}`} className={`linhas linhas-${i}`}></div>
-    )
-  }
 
   return (
-    <div className='container_dobra_espacial'>
-        <div className="dobra">
-           {vortex}
-           {linhas}
-        </div>
+    <div className='container_dobra_espacial'> 
+      <div className="dobra">
+       {vortex}
+      </div>
     </div>
   )
 }

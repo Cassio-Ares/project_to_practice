@@ -1,0 +1,79 @@
+$numeroDeVortex: 30;
+$numeroDeLinhas: 24;
+$duracaoDaAnimacao: 4s;
+
+.container_dobra_espacial {
+  background: #232425;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.dobra {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+
+  .vortex {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+
+  .linhas {
+    background: #c3dcec;
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    top: 90px;
+    left: 99px;
+  }
+}
+
+@for $i from 1 through $numeroDeVortex {
+  $nullbase1: $i - 1;
+  $timeOffset: $nullbase1 * ($duracaoDaAnimacao / $numeroDeVortex) * -1;
+  .vortex-#{$i} {
+    animation: vortex  $duracaoDaAnimacao  cubic-bezier(0.98, 0.02, 0.97, 0.12)  $timeOffset  infinite;
+
+    @for $j from 1 through $numeroDeLinhas {
+      $nullbase2: $j - 1;
+      $degree: ((360 / $numeroDeLinhas) * $nullbase2) - (random() * 10);
+      $offset: 100 - (random() * 40);
+      .linhas-#{$j} {
+        transform: rotate(($degree) + deg)  translate3d(0, ($offset) + px, 0)  scaleY(($offset / 100));
+      }
+    }
+  }
+}
+
+@keyframes vortex {
+  0% {
+    transform: scale(0);
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 1;
+  }
+}
+
+
+// .vortex-1{
+//   animation: ring 4s cubic-bezier(0.98, 0.02, 0.97, 0.12) 0s infinite;
+// }
+
+// .vortex-1 .linha-1 {
+//   transform: rotate(-0.8306607666deg) translate3d(0, 93.0899018742px, 0) scaleY(0.9308990187);
+// }
+
+// .vortex-1 .linha-2 {
+//   transform: rotate(9.4143507942deg) translate3d(0, 73.3107504853px, 0) scaleY(0.7331075049);
+// }

@@ -1,5 +1,5 @@
-//import './stylesLiquido_girando.css';
-import './stylesLiquido_girando.scss';
+import './stylesLiquido_girando.css';
+//import './stylesLiquido_girando.scss';
 
 export const Liquido_Girando = () => {
     const bolha = [];
