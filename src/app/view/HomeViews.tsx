@@ -25,6 +25,7 @@ import { Tabela_de_Precos } from "../../components/tabela_de_precos/Tabela_de_Pr
 import { Water_Drop } from "../../components/water_drop/Water_Drop";
 import { Liquido_Girando } from "@/components/liquido_girando/Liquido_Girando";
 import { Dobra_Espacial } from "@/components/dobra_espacial/Dobra_Espacial";
+import { Card_Contact } from "@/components/card_contact/Card_Contact";
 
 
 export default function HomeViews() {
@@ -41,7 +42,7 @@ export default function HomeViews() {
 
       <Box_Container sx={{ flexGrow: 1 }}>
         <Grid container spacing={{ xs: 3, md: 10 }} columns={{ xs: 4, sm: 10, md: 12 }}>
-           <Grid item xs={2} sm={4} md={4}>
+          <Grid item xs={2} sm={4} md={4}>
              <Btn_Neon />
           </Grid>
 
@@ -118,6 +119,10 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Dobra_Espacial/>
+          </Grid>
+
+          <Grid item xs={2} sm={4} md={4}>
+            <Card_Contact />
           </Grid>
 
         </Grid>

@@ -1,0 +1,73 @@
+.container_Card_contact {
+  background: #868686b0;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+/* 
+clamp(min, variação, max)clamp(200px, 50vw, 315px);
+   - min é o valor mínimo.
+   - val é o valor flexível (pode ser baseado em viewport, por exemplo).
+   - max é o valor máximo.
+ */
+
+.card_card_contact {
+  display: inline-block;
+  margin: 10px;
+  width: 380px;
+  height: 150px;
+  background: #fdf9f9;
+  border-radius: 10px;
+  color: #333;
+  position: relative;
+}
+
+.card_card_contact *,
+.card_card_contact::before,
+.card_card_contact::after {
+  box-sizing: border-box;
+  transition: all 0.1s ease;
+}
+
+.img {
+  max-width: 40%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  border-radius: 5px;
+  margin-top: -25px;
+  margin-left: 57%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.figcaption {
+  position: absolute;
+  top: 25px;
+  right: 40%;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+}
+
+.name {
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.icons {
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  color: #868383;
+}
+
+.icons .iconFa:hover {
+  color: #2980b9;
+  transform: scale(1.2);
+}
