@@ -1,5 +1,5 @@
-//import './stylesBK.css';
-import './styleBk.scss';
+import './stylesBK.css';
+//import './styleBk.scss';
 
 
 export const Background_em_movimento = () => {
