@@ -44,14 +44,14 @@
 
 .container_carrossel{
     position: relative;
-    animation: rotate 8s ease-in-out infinite;
+    animation: animeWords 8s ease-in-out infinite;
 }
 
 .palavras{
     display: block;
 }
 
-@keyframes rotate {
+ @keyframes animeWords {
     0%, 20%{
       transform: translateY(0);
     }
@@ -67,4 +67,4 @@
     100%{
        transform: translateY(-175px);
     }
-}
+} 
