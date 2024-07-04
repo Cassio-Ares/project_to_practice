@@ -1,0 +1,70 @@
+.container_carrossel_palavras {
+  background: #f39d12;
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.carrossel_palavras_center {
+  position: absolute;
+  top: 46%;
+  left: 0;
+  right: 0;
+}
+
+.carrossel_palavras {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.palavras_fixas{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    height: 30px;
+    text-shadow: 2px 2px 2px #7c6b5b;
+    font-size: 32px;
+}
+
+.container_carrossel_outras{
+    position: absolute;
+    top: 0;
+    left: 53%;
+    text-align: center;
+    height: 35px;
+    overflow: hidden;
+    font-size: 32px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 2px #7c6b5b;
+}
+
+.container_carrossel{
+    position: relative;
+    animation: rotate 8s ease-in-out infinite;
+}
+
+.palavras{
+    display: block;
+}
+
+@keyframes rotate {
+    0%, 20%{
+      transform: translateY(0);
+    }
+    25%, 45%{
+      transform: translateY(-40px);
+    }
+    50%, 70%{
+       transform: translateY(-79px);
+    }
+    75%, 100%{
+        transform: translateY(-115px);
+    }
+    100%{
+       transform: translateY(-175px);
+    }
+}
