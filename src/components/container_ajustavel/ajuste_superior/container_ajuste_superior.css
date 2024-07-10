@@ -1,0 +1,24 @@
+.resizable-container {
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    position: relative;
+  }
+  
+  .content {
+    padding: 10px;
+    overflow: auto;
+  }
+  
+  .resizer {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    cursor: ns-resize;
+    position: absolute;
+  }
+  
+  .resizer.top {
+    top: 0;
+  }
+  

@@ -27,7 +27,8 @@ import { Liquido_Girando } from "@/components/liquido_girando/Liquido_Girando";
 import { Dobra_Espacial } from "@/components/dobra_espacial/Dobra_Espacial";
 import { Card_Contact } from "@/components/card_contact/Card_Contact";
 import { Carrossel_de_palavras } from "@/components/carrosel_de_palavras/Carrossel_de_palavras";
-import { Container_Ajustavel } from "@/components/container_ajustavel/Container_Ajustavel";
+import { Container_Ajustavel } from "@/components/container_ajustavel/ajuste_inferior/Container_Ajustavel";
+import { Container_ajustavel_superior } from "@/components/container_ajustavel/ajuste_superior/Container_ajustavel_superior";
 
 
 export default function HomeViews() {
@@ -133,6 +134,10 @@ export default function HomeViews() {
 
           <Grid item xs={2} sm={4} md={4}>
             <Container_Ajustavel />
+          </Grid>
+
+          <Grid item xs={2} sm={4} md={4}>
+            <Container_ajustavel_superior />
           </Grid>
 
         </Grid>
